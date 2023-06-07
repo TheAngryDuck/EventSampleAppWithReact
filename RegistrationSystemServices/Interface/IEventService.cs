@@ -1,13 +1,13 @@
 ﻿using EventAppDataLayer.Dto;
 
-namespace EventAppDataLayer.Interface
+namespace EventAppServices.Interface
 {
     public interface IEventService
     {
         IEnumerable<EventDto> getEvents();
-        public void addEvent(EventDto eventOb);
-        public void removeEvent(EventDto eventOb);
-        public void updateEvent(EventDto eventOb);
+        public void addEvent(EventDto dto);
+        public void removeEvent(EventDto dto);
+        public void updateEvent(EventDto dto);
         public EventDto getEventById(Guid id);
 
     }

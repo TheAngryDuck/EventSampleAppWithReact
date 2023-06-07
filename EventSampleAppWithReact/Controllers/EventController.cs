@@ -1,15 +1,13 @@
 ﻿using EventAppDataLayer.Dto;
-using EventAppDataLayer.Entity;
-using EventAppDataLayer.Interface;
-using EventAppDataLayer.Service;
+using EventAppServices.Interface;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace EventSampleAppWithReact.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("[controller]")]
     public class EventController : ControllerBase
     {
 
@@ -24,9 +22,9 @@ namespace EventSampleAppWithReact.Controllers
 
         // GET: api/<EventController>
         [HttpGet]
-        public List<EventDto> Get()
+        public IEnumerable<EventDto> Get()
         {
-            return _eventService.getEvents().ToList();
+            return _eventService.getEvents();
         }
 
         // GET api/<EventController>/5

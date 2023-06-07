@@ -1,8 +1,9 @@
 ﻿using EventAppDataLayer.Dto;
 using EventAppDataLayer.Interface;
+using EventAppServices.Interface;
 using EventAppServices.Mapper;
 
-namespace EventAppDataLayer.Service
+namespace EventAppServices.Service
 {
     public class EventService : IEventService
     {

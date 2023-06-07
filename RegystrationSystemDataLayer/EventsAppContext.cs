@@ -8,5 +8,9 @@ namespace EventAppDataLayer
         public EventsAppContext(DbContextOptions<EventsAppContext> options) : base(options) { }
 
         public DbSet<Event> Events { get; set; }
+
+        public DbSet<Participant> Participants { get; set; }
+
+        public DbSet<ParticipantInEvent> ParticipansInEvents { get; set; }
     }
 }
